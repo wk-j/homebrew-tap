@@ -1,5 +1,5 @@
 class Xenon < Formula
-  desc "Central resource server for Krypton-generated artifacts, reviews, analyses and docs"
+  desc "Resource server for Krypton-generated artifacts, reviews and analyses"
   homepage "https://github.com/wk-j/xenon"
   url "https://github.com/wk-j/xenon/archive/refs/tags/v0.1.0.tar.gz"
   sha256 "40ddb9fa5b1994e1ba221ac1ad6af22cd3792195e00d7ffe11a5cf4c1aa17fbe"
