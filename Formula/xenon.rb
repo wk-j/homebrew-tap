@@ -1,8 +1,8 @@
 class Xenon < Formula
   desc "Resource server for Krypton-generated artifacts, reviews and analyses"
   homepage "https://github.com/wk-j/xenon"
-  url "https://github.com/wk-j/xenon/archive/refs/tags/v0.1.4.tar.gz"
-  sha256 "1360820496fdc5d04e35b2edde7b6c4763d104ba1d7838b77cc9195903e7108f"
+  url "https://github.com/wk-j/xenon/archive/refs/tags/v0.1.6.tar.gz"
+  sha256 "7a484caac2e9ee2c74e4b356875c7e1ece491a748f30c563fa8c0d314891b16e"
   license "MIT"
   head "https://github.com/wk-j/xenon.git", branch: "master"
 
@@ -10,6 +10,7 @@ class Xenon < Formula
 
   def install
     system "cargo", "install", *std_cargo_args
+    system "cargo", "install", *std_cargo_args(path: "cli")
 
     # xenon refuses to start without XENON_SESSION_SECRET, and the secret has to
     # survive restarts or every session is invalidated. This wrapper mints one
@@ -49,6 +50,8 @@ class Xenon < Formula
 
         brew services start xenon    run in the background on :8787
         xenon-serve                  run in the foreground
+        xen login --email you@…      sign the CLI into this instance
+        xen invite                   mint a single-use invite (admin)
 
       The FIRST account registered at http://localhost:8787/register becomes the
       admin. Do that before the instance is reachable from anywhere else.
@@ -66,6 +69,8 @@ class Xenon < Formula
     ENV["XENON_SESSION_SECRET"] = "0" * 32
     ENV["XENON_DATA_DIR"] = testpath/"data"
     ENV["XENON_PORT"] = port.to_s
+
+    assert_match "Command-line client", shell_output("#{bin}/xen --help")
 
     pid = spawn bin/"xenon"
     sleep 5
