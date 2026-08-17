@@ -1,8 +1,8 @@
 class Xenon < Formula
   desc "Resource server for Krypton-generated artifacts, reviews and analyses"
   homepage "https://github.com/wk-j/xenon"
-  url "https://github.com/wk-j/xenon/archive/refs/tags/v0.1.15.tar.gz"
-  sha256 "1215f9f6a47ac4b1cfda401f300399eddb2e49786fea7f4d9df7ad1b48b06fee"
+  url "https://github.com/wk-j/xenon/archive/refs/tags/v0.1.16.tar.gz"
+  sha256 "ab9f4036430200719ef1fd81e5436075e032ac7e0be637591ea5f669257a24df"
   license "MIT"
   head "https://github.com/wk-j/xenon.git", branch: "master"
 
