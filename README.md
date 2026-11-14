@@ -68,11 +68,11 @@ a secret by name (`ta run -s TOKEN -- …`) and never sees its value. Source:
 brew install wk-j/tap/tantalum           # latest tagged release
 brew install --HEAD wk-j/tap/tantalum    # straight from main
 ta init                                  # create a vault, in your own terminal
+ta skill setup                           # agent skill for Claude Code, Codex, …
 ```
 
-Installs the command `ta`, and the agent skill in
-`$(brew --prefix tantalum)/share/tantalum/skills/tantalum`; the caveats show how
-to link it for Claude Code and omp.
+Installs the command `ta`. `ta skill setup` gives the agent skill to Claude Code,
+Codex, OpenCode, Pi and omp, and `ta skill status` shows where it is installed.
 
 Built from source — `go` is pulled in as a build-only dependency, and cgo needs
 the Xcode command line tools. macOS only: vault keys live in the login Keychain.
