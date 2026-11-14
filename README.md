@@ -91,3 +91,16 @@ brew install --cask wk-j/tap/font-420-taper
 
 Installs `420Taper-Regular.ttf` and `420Taper-Italic.ttf` into `~/Library/Fonts`;
 pick **420 Taper** in your editor or terminal.
+
+### font-bai-jamjuree-taper
+
+Bai Jamjuree (Cadson Demak) with stems that narrow toward their free ends.
+Regular, Italic, Bold and Bold Italic; Latin, Vietnamese and Thai. Source:
+[wk-j/bai-jamjuree-taper](https://github.com/wk-j/bai-jamjuree-taper).
+
+```sh
+brew install --cask wk-j/tap/font-bai-jamjuree-taper
+```
+
+Installs the four `BaiJamjureeTaper-*.ttf` files into `~/Library/Fonts`;
+pick **Bai Jamjuree Taper**.
