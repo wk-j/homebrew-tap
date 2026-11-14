@@ -1,6 +1,6 @@
 cask "image-shelf" do
-  version "0.4.1"
-  sha256 "a018dfcbc4e5c1096b65a8fc3f3e42d5a8fd4c3d271c99533b3f6fcbedeb61c5"
+  version "0.4.2"
+  sha256 "59be1f1e8dface78a334bd8e7cdf76caa6c6c5fc92f6f58c787f8f90f5511c25"
 
   url "https://github.com/wk-j/image-shelf/releases/download/v#{version}/image-shelf-#{version}-macos-arm64.zip"
   name "Image Shelf"
