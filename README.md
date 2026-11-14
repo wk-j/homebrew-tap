@@ -76,3 +76,18 @@ Codex, OpenCode, Pi and omp, and `ta skill status` shows where it is installed.
 
 Built from source — `go` is pulled in as a build-only dependency, and cgo needs
 the Xcode command line tools. macOS only: vault keys live in the login Keychain.
+
+## Casks
+
+### font-420-taper
+
+Monospaced coding font: Share Tech Mono (Nerd Fonts patch) with stems that
+narrow toward their free ends, plus a 10° Italic. Source:
+[wk-j/420-taper](https://github.com/wk-j/420-taper).
+
+```sh
+brew install --cask wk-j/tap/font-420-taper
+```
+
+Installs `420Taper-Regular.ttf` and `420Taper-Italic.ttf` into `~/Library/Fonts`;
+pick **420 Taper** in your editor or terminal.
