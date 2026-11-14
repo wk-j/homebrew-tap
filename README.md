@@ -32,3 +32,28 @@ State lives in `~/.config/xenon`, never in the checkout, so a dev build and the
 installed binary are the same server with the same accounts. Back up that whole
 directory: `xenon.db` alone is not enough, because file bytes live beside it in
 `blobs/`.
+
+### valence
+
+Web report for [Krypton](https://github.com/wk-j/krypton) e2e runs and SARIF
+security scans: `valence push` / `valence push-scan` send them,
+`valence serve` shows them. Source: [wk-j/valence](https://github.com/wk-j/valence).
+
+```sh
+brew install wk-j/tap/valence           # latest tagged release
+brew install --HEAD wk-j/tap/valence    # straight from main
+valence skill setup                     # agent skill for Claude Code, Codex, …
+```
+
+wk-j/valence is private, so Homebrew clones it with your GitHub login instead
+of downloading a tarball. Homebrew's download sandbox passes git a `GH_TOKEN`
+from the GitHub CLI, which only gh's credential helper reads; Git Credential
+Manager cannot run in the sandbox. Once per machine, with an account that can
+read the repository:
+
+```sh
+gh auth login
+gh auth setup-git --hostname github.com
+```
+
+Built from source — `go` is pulled in as a build-only dependency.
