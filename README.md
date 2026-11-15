@@ -77,6 +77,24 @@ Codex, OpenCode, Pi and omp, and `ta skill status` shows where it is installed.
 Built from source — `go` is pulled in as a build-only dependency, and cgo needs
 the Xcode command line tools. macOS only: vault keys live in the login Keychain.
 
+### storage-scanner
+
+Native disk map for macOS: a glowing dot-matrix bar of what is using the disk,
+and a Developer tools tab that measures package-manager caches, toolchains and
+project build folders and shows the command that cleans each one up. It never
+runs those commands itself. Source:
+[wk-j/storage-scanner](https://github.com/wk-j/storage-scanner).
+
+```sh
+brew install wk-j/tap/storage-scanner           # latest tagged release
+brew install --HEAD wk-j/tap/storage-scanner    # straight from main
+storage-scanner                                 # opens the window
+```
+
+Built from source — `rust` is pulled in as a build-only dependency, so the
+install compiles rather than downloading a bottle. macOS only: the window
+renders through Metal.
+
 ## Casks
 
 ### font-420-taper
