@@ -1,8 +1,8 @@
 class StorageScanner < Formula
   desc "Native disk map with a developer tools view and manual cleanup commands"
   homepage "https://github.com/wk-j/storage-scanner"
-  url "https://github.com/wk-j/storage-scanner/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "f095a1a430807d0d0669596bd5cfa6352af1d59b85e447964e6c9e601bf57ce4"
+  url "https://github.com/wk-j/storage-scanner/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "151b7c92c8d879b4c4e7318251825abde577c2f2a89f2bea7aedccc44248499e"
   head "https://github.com/wk-j/storage-scanner.git", branch: "main"
 
   depends_on "rust" => :build
