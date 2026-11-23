@@ -122,3 +122,17 @@ brew install --cask wk-j/tap/font-bai-jamjuree-taper
 
 Installs the four `BaiJamjureeTaper-*.ttf` files into `~/Library/Fonts`;
 pick **Bai Jamjuree Taper**.
+
+### font-m-plus-code-taper
+
+Monospaced coding font: M PLUS 1 Code (M+ FONTS Project) with stems that narrow
+toward their free ends. Regular and Bold; Latin, Vietnamese and Japanese (kana
+and kanji stay untouched and two cells wide). Source:
+[wk-j/m-plus-code-taper](https://github.com/wk-j/m-plus-code-taper).
+
+```sh
+brew install --cask wk-j/tap/font-m-plus-code-taper
+```
+
+Installs `MPLUSCodeTaper-Regular.ttf` and `MPLUSCodeTaper-Bold.ttf` into
+`~/Library/Fonts`; pick **M PLUS Code Taper** in your editor or terminal.
